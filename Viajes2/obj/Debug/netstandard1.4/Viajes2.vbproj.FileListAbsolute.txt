@@ -1,0 +1,8 @@
+C:\Users\Romina\Documents\ProyectosVisual\Viajes2\Viajes2\bin\Debug\netstandard1.4\Viajes2.deps.json
+C:\Users\Romina\Documents\ProyectosVisual\Viajes2\Viajes2\bin\Debug\netstandard1.4\Viajes2.dll
+C:\Users\Romina\Documents\ProyectosVisual\Viajes2\Viajes2\bin\Debug\netstandard1.4\Viajes2.pdb
+C:\Users\Romina\Documents\ProyectosVisual\Viajes2\Viajes2\obj\Debug\netstandard1.4\Viajes2.vbprojAssemblyReference.cache
+C:\Users\Romina\Documents\ProyectosVisual\Viajes2\Viajes2\obj\Debug\netstandard1.4\Viajes2.vbproj.CoreCompileInputs.cache
+C:\Users\Romina\Documents\ProyectosVisual\Viajes2\Viajes2\obj\Debug\netstandard1.4\Viajes2.AssemblyInfo.vb
+C:\Users\Romina\Documents\ProyectosVisual\Viajes2\Viajes2\obj\Debug\netstandard1.4\Viajes2.dll
+C:\Users\Romina\Documents\ProyectosVisual\Viajes2\Viajes2\obj\Debug\netstandard1.4\Viajes2.pdb

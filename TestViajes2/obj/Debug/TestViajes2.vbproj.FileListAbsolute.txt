@@ -1,0 +1,14 @@
+C:\Users\Romina\Documents\ProyectosVisual\Viajes2\TestViajes2\bin\Debug\TestViajes2.exe.config
+C:\Users\Romina\Documents\ProyectosVisual\Viajes2\TestViajes2\bin\Debug\TestViajes2.exe
+C:\Users\Romina\Documents\ProyectosVisual\Viajes2\TestViajes2\bin\Debug\TestViajes2.pdb
+C:\Users\Romina\Documents\ProyectosVisual\Viajes2\TestViajes2\bin\Debug\TestViajes2.xml
+C:\Users\Romina\Documents\ProyectosVisual\Viajes2\TestViajes2\bin\Debug\Viajes2.dll
+C:\Users\Romina\Documents\ProyectosVisual\Viajes2\TestViajes2\bin\Debug\Viajes2.pdb
+C:\Users\Romina\Documents\ProyectosVisual\Viajes2\TestViajes2\obj\Debug\TestViajes2.vbprojAssemblyReference.cache
+C:\Users\Romina\Documents\ProyectosVisual\Viajes2\TestViajes2\obj\Debug\TestViajes2.Resources.resources
+C:\Users\Romina\Documents\ProyectosVisual\Viajes2\TestViajes2\obj\Debug\TestViajes2.vbproj.GenerateResource.cache
+C:\Users\Romina\Documents\ProyectosVisual\Viajes2\TestViajes2\obj\Debug\TestViajes2.vbproj.CoreCompileInputs.cache
+C:\Users\Romina\Documents\ProyectosVisual\Viajes2\TestViajes2\obj\Debug\TestViajes2.vbproj.CopyComplete
+C:\Users\Romina\Documents\ProyectosVisual\Viajes2\TestViajes2\obj\Debug\TestViajes2.exe
+C:\Users\Romina\Documents\ProyectosVisual\Viajes2\TestViajes2\obj\Debug\TestViajes2.xml
+C:\Users\Romina\Documents\ProyectosVisual\Viajes2\TestViajes2\obj\Debug\TestViajes2.pdb
