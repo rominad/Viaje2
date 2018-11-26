@@ -1,6 +1,7 @@
 ﻿Public Class Cliente
     Inherits Entidad
     Private _cuit_cuil As String
+    Private _venta As Ventas
     Public Property Cuit_Cuil As String
         Get
             Return _cuit_cuil
@@ -11,6 +12,14 @@
             Else
                 Throw New ArgumentException("No debe contener mas de 13 caracteres!")
             End If
+        End Set
+    End Property
+    Public Property Venta As Ventas
+        Get
+            Return _venta
+        End Get
+        Set(value As Ventas)
+            _venta = value
         End Set
     End Property
     Sub New(cuit_cuil As String, nombre As String, domicilio As String)

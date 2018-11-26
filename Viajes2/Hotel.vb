@@ -1,6 +1,4 @@
-﻿Imports Viajes2
-
-Public Class Hotel
+﻿Public Class Hotel
     Implements Cotizacion
     Implements Servicio
     Private _habitaciones As Byte
@@ -44,13 +42,13 @@ Public Class Hotel
     End Property
     Public ReadOnly Property PrecioPesos As Decimal Implements Cotizacion.PrecioPesos
         Get
-            Return PrecioDiaria * Noches
+            Return PrecioDolar
         End Get
     End Property
 
     Public ReadOnly Property PrecioDolar As Decimal Implements Cotizacion.PrecioDolar
         Get
-            Return PrecioPesos * 0.36
+            Return PrecioDiaria * Noches
         End Get
     End Property
 

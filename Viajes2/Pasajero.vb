@@ -6,7 +6,6 @@ Public Class Pasajero
     Private _pasaporte As UInteger
     Private _dni As UInteger
     Private _fechaNac As Date
-    Private DateInterval As Object
 
     Public Property Pasaporte As UInteger Implements IPasajero.Pasaporte
         Get
@@ -35,13 +34,13 @@ Public Class Pasajero
         End Set
     End Property
     Public Function isMayorEdad() As Boolean
-        'Dim edad As Long
-        'edad = DateDiff(DateInterval.Day, Date.Now(), FechaNacimiento)
-        'If edad > 17 Then
-        '    Return True
-        'Else
-        '    Return False
-        'End If
+        Dim edad As Long
+        edad = Date.Now().Year() - FechaNacimiento.Year()
+        If edad > 17 Then
+            Return True
+        Else
+            Return False
+        End If
         Return True
     End Function
 
