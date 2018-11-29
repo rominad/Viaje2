@@ -70,7 +70,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CiudadTest.vb" />
-    <Compile Include="EntidadTest.vb" />
     <Compile Include="HotelTest.vb" />
     <Compile Include="ClienteTest.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />
@@ -89,6 +88,7 @@
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
     <Compile Include="PaqueteTest.vb" />
+    <Compile Include="PasajeroTest.vb" />
     <Compile Include="PasajeTest.vb" />
     <Compile Include="VentasTest.vb" />
   </ItemGroup>
