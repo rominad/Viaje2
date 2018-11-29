@@ -8,6 +8,7 @@
     Private _descripcion As String
     Private _fechainicial As Date
     Private _precio As Decimal
+    Private _venta As Ventas
     Public Property Habitaciones As Byte
         Get
             Return _habitaciones
@@ -72,7 +73,14 @@
             _fechainicial = value
         End Set
     End Property
-
+    Public Property Venta As Ventas Implements Servicio.Venta
+        Get
+            Return _venta
+        End Get
+        Set(value As Ventas)
+            _venta = value
+        End Set
+    End Property
     Public Overrides Function ToString() As String
         Return Descripcion
     End Function

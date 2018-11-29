@@ -4,10 +4,11 @@ Public Class Ventas
     Implements Cotizacion
     Private _fecha As Date
     Private Shared _cotizacionDolarPesos As Decimal
-    Private _pasajeros As List(Of Pasajero)
-    Private _cliente As Cliente
+    Private _pasajeros As List(Of IPasajero)
+    Private _clientes As List(Of Cliente)
     Private _noches As Byte
     Private _precioDiaria As Decimal
+    Private _servicio As Servicio
 
     Public Property Fecha As Date
         Get
@@ -15,6 +16,22 @@ Public Class Ventas
         End Get
         Set(value As Date)
             _fecha = value
+        End Set
+    End Property
+    Public Property Noches As Byte
+        Get
+            Return _noches
+        End Get
+        Set(value As Byte)
+            _noches = value
+        End Set
+    End Property
+    Property PrecioDiaria As Decimal
+        Get
+            Return _precioDiaria
+        End Get
+        Set(value As Decimal)
+            _precioDiaria = value
         End Set
     End Property
     Public Shared Property CotizacionDolarPesos As Decimal
@@ -25,12 +42,12 @@ Public Class Ventas
             _cotizacionDolarPesos = value
         End Set
     End Property
-    Public Property Cliente As Cliente
+    Public Property Servicio() As Servicio
         Get
-            Return _cliente
+            Return _servicio
         End Get
-        Set(value As Cliente)
-            _cliente = Cliente
+        Friend Set(ByVal value As Servicio)
+            _servicio = value
         End Set
     End Property
     Public Function PrecioTotal() As Decimal
@@ -43,7 +60,7 @@ Public Class Ventas
     Public Sub RemovePasajero(pasajero As IPasajero)
         _pasajeros.Remove(pasajero)
     End Sub
-    Public Function GetAllPasajero() As List(Of Pasajero)
+    Public Function GetAllPasajero() As List(Of IPasajero)
         Return _pasajeros
     End Function
     Public ReadOnly Property PrecioPesos As Decimal Implements Cotizacion.PrecioPesos
@@ -51,9 +68,26 @@ Public Class Ventas
             Return PrecioDolar
         End Get
     End Property
+    Public Sub addCliente(valor As Cliente)
+        If _clientes.Count < 0 Then
+            If valor.Ventas IsNot Nothing Then
+                Dim OTRACLASE = valor.Ventas
+                OTRACLASE.removeCliente(valor)
+            End If
+            valor.Ventas = Me
+            _clientes.Add(valor)
+        End If
+    End Sub
+    Public Sub removeCliente(valor As Cliente)
+        valor.Ventas = Nothing
+        _clientes.Remove(valor)
+    End Sub
+    Public Function getAllCliente() As List(Of Cliente)
+        Return _clientes
+    End Function
     Public ReadOnly Property PrecioDolar As Decimal Implements Cotizacion.PrecioDolar
         Get
-            Return _precioDiaria * _noches
+            Return PrecioDiaria * Noches
         End Get
     End Property
     Public Overrides Function ToString() As String
@@ -62,5 +96,6 @@ Public Class Ventas
     Sub New(fecha As Date, cliente As Cliente)
         Me.Fecha = fecha
         Me.Cliente = cliente
+        _pasajeros = New List(Of Pasajero)
     End Sub
 End Class

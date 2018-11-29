@@ -7,23 +7,26 @@
             Return _cuit_cuil
         End Get
         Set(value As String)
-            If value.Length < 14 Then
-                _cuit_cuil = value
+            If value.Length <> 13 Then
+                Throw New ArgumentException("No debe contener mas,ni menos de 13 caracteres!")
+
             Else
-                Throw New ArgumentException("No debe contener mas de 13 caracteres!")
+                _cuit_cuil = value
             End If
         End Set
     End Property
-    Public Property Venta As Ventas
+    Public Property Ventas As Ventas
         Get
             Return _venta
         End Get
-        Set(value As Ventas)
+        Friend Set(value As Ventas)
             _venta = value
         End Set
     End Property
+
     Sub New(cuit_cuil As String, nombre As String, domicilio As String)
         MyBase.New(nombre, domicilio)
         Me.Cuit_Cuil = cuit_cuil
+        Ventas.addCliente(Me)
     End Sub
 End Class

@@ -9,6 +9,9 @@ Public Class Paquete
     Private _NumeroDias As UShort
     Private _NumeroPasajero As UShort
     Private _servicios As List(Of Servicio)
+    Private _descripcion As String
+    Private _fechainicial As Date
+    Private _venta As Ventas
     'PROPIEDADES'
     Private Property FechaFinal As Date
         Get
@@ -45,19 +48,30 @@ Public Class Paquete
 
     Public Property Descripcion As String Implements Servicio.Descripcion
         Get
-            Throw New NotImplementedException()
+            Return _descripcion
         End Get
         Set(value As String)
-            Throw New NotImplementedException()
+            If value.Length > 30 Then
+                Throw New ArgumentException("La descripcion no debe contener mas de 30 caracteres!")
+            End If
+            _descripcion = value
         End Set
     End Property
 
     Public Property FechaInicial As Date Implements Servicio.FechaInicial
         Get
-            Throw New NotImplementedException()
+            Return _fechainicial
         End Get
         Set(value As Date)
-            Throw New NotImplementedException()
+            _fechainicial = value
+        End Set
+    End Property
+    Public Property Venta As Ventas Implements Servicio.Venta
+        Get
+            Return _venta
+        End Get
+        Set(value As Ventas)
+            _venta = value
         End Set
     End Property
     'METODOS'

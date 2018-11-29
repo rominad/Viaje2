@@ -9,6 +9,7 @@ Public Class Pasaje
     Private _asientos As Byte
     Private _descripcion As String
     Private _fechaInicial As Date
+    Private _venta As Ventas
     Public Property Origen As Ciudad
         Get
             Return _origen
@@ -72,6 +73,14 @@ Public Class Pasaje
         End Get
         Set(value As Date)
             _fechainicial = value
+        End Set
+    End Property
+    Public Property Venta As Ventas Implements Servicio.Venta
+        Get
+            Return _venta
+        End Get
+        Set(value As Ventas)
+            _venta = value
         End Set
     End Property
     Public Overrides Function ToString() As String

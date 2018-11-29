@@ -1,4 +1,4 @@
-﻿Public Class Entidad
+﻿Public MustInherit Class Entidad
     Private _nombre As String
     Private _domicilio As String
     Public Property Nombre As String

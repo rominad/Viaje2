@@ -1,6 +1,5 @@
 ﻿Public Class Agencia
     Private Shared _ventas As List(Of Ventas)
-
     Public Shared Sub AddVenta(venta As Ventas)
         _ventas.Add(venta)
     End Sub
